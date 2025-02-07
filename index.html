@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madan Lal | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .project:hover {
+                transform: scale(1.05);
+            }
+
+            .project img {
+                width: 100%;
+                border-radius: 10px;
+            }
+    </style>
+</head>
+<body>
+    <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; background-color: #f4f4f4; border-bottom: 1px solid #ddd;">
+        <div style="display: flex; align-items: center;">
+            <img src="assets/images/me.jpeg" alt="Madan Lal" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
+            <h1 style="margin: 0; font-size: 1.5rem; color: #333;">MADAN LAL</h1>
+        </div>
+        <div style="text-align: center; flex-grow: 1;">
+            <a href="assets/documents/Madan_Lal_Resume.pdf" download style="display: inline-block; padding: 8px 16px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); font-size: 0.9rem; margin-bottom: 10px;">Download Resume</a>
+            <nav>
+                <ul style="list-style: none; padding: 0; margin: 0 auto; display: flex; justify-content: center; gap: 20px;">
+                    <li><a href="#about" style="color: #007bff; text-decoration: none; font-size: 1rem;">Why Me?</a></li>
+                    <li><a href="#projects" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Do?</a></li>
+                    <li><a href="#skills" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Use?</a></li>
+                    <li><a href="#certifications" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Have?</a></li>
+                    <li><a href="#contact-form" style="color: #007bff; text-decoration: none; font-size: 1rem;">More Questions?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Enthusiastic Data Analyst & Developer, Working across multiple industries i.e. Automotive, Marketing, Manufacturing. Proficient in SQL, Python, Power BI, Tableau, and other analytics & visualization tools to deliver data-driven insights and automation solutions.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="gallery">
+            <div class="project">
+                <img src="assets/images/Performance_dashboard.jpg" alt="Performance Dashboard">
+                <h3>Performance Dashboard</h3>
+                <p>Designed an advanced Power BI dashboard to track Overall Equipment Effectiveness (OEE%), production volumes, runtime, and downtime.</p>
+            </div>
+            <div class="project">
+                <img src="assets/images/process_automation.jpg" alt="Process Automation">
+                <h3>Process Automation</h3>
+                <p>Led development of an automated data collection system, reducing manual data entry time by 75% using SQL, Power BI, and VBA.</p>
+            </div>
+            <div class="project">
+                <img src="assets/images/Analytics.jpg" alt="Analytics">
+                <h3>Analytics</h3>
+                <p>Analyzed production cycle data to reduce waste and improve efficiency, integrating insights into high-level decision-making.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><strong>Programming:</strong> Python, SQL, DAX, VBA, HTML</li>
+            <li><strong>BI & Visualization:</strong> Power BI, Tableau, Google Analytics</li>
+            <li><strong>CRM & ERP:</strong> Salesforce, Epicor, SAP, JIRA</li>
+            <li><strong>Data Warehousing:</strong> Snowflake, AWS, Google BigQuery</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li><strong>Microsoft Office Suite 365</strong></li>
+            <li><strong>ISO Health & Safetey</strong></li>
+            <li><strong>Tally (Accounting Analyis)</strong></li>
+        </ul>
+    </section>
+
+    <section id="contact-form">
+        <h2>Contact Me</h2>
+        <!-- Updated form action to send_email.php for server-side processing -->
+        <form action="send_email.php" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
+            <label for="name" style="display: block; margin-top: 10px;">Name:</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+
+            <label for="email" style="display: block; margin-top: 10px;">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+
+            <label for="message" style="display: block; margin-top: 10px;">Message:</label>
+            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+            <button type="submit" style="margin-top: 10px; background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Madan Lal | Business Data Analyst</p>
+    </footer>
+
+    <script>
+        // Intersection Observer for section animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+    <script>
+        // Form submission handling using Fetch API
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector("#contact-form form");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                fetch("send_email.php", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Network response was not ok");
+                        }
+                        return response.text();
+                    })
+                    .then(result => {
+                        alert("Thank you for your message. Your message has been sent!");
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("There was an error sending your message. Please try again later.");
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
