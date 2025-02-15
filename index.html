@@ -36,23 +36,21 @@
 </head>
 <body>
     <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; background-color: #f4f4f4; border-bottom: 1px solid #ddd;">
-        <div style="display: flex; align-items: center;">
-            <img src="Assets/images/me.jpeg" alt="Madan Lal" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-            <h1 style="margin: 0; font-size: 1.5rem; color: #333;">MADAN LAL</h1>
-        </div>
-        <div style="text-align: center; flex-grow: 1;">
-            <a href="Assets/documents/Madan_Lal_Resume.pdf" download style="display: inline-block; padding: 8px 16px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); font-size: 0.9rem; margin-bottom: 10px;">Download Resume</a>
-            <nav>
-                <ul style="list-style: none; padding: 0; margin: 0 auto; display: flex; justify-content: center; gap: 20px;">
-                    <li><a href="#about" style="color: #007bff; text-decoration: none; font-size: 1rem;">Why Me?</a></li>
-                    <li><a href="#projects" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Do?</a></li>
-                    <li><a href="#skills" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Use?</a></li>
-                    <li><a href="#certifications" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Have?</a></li>
-                    <li><a href="#contact-form" style="color: #007bff; text-decoration: none; font-size: 1rem;">More Questions?</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div style="display: flex; align-items: center;">
+        <img src="Assets/images/me.jpeg" alt="Madan Lal" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
+        <h1 style="margin: 0; font-size: 1.5rem; color: #333;">MADAN LAL</h1>
+    </div>
+    <nav style="text-align: center; flex-grow: 1;">
+        <ul style="list-style: none; padding: 0; margin: 0 auto; display: flex; justify-content: center; gap: 20px;">
+            <li><a href="#about" style="color: #007bff; text-decoration: none; font-size: 1rem;">Why Me?</a></li>
+            <li><a href="#projects" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Do?</a></li>
+            <li><a href="#skills" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Use?</a></li>
+            <li><a href="#certifications" style="color: #007bff; text-decoration: none; font-size: 1rem;">What I Have?</a></li>
+            <li><a href="#contact-form" style="color: #007bff; text-decoration: none; font-size: 1rem;">More Questions?</a></li>
+        </ul>
+    </nav>
+</header>
+
 
     <section id="about">
         <h2>About Me</h2>
@@ -116,9 +114,15 @@
         </form>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Madan Lal | Business Data Analyst</p>
-    </footer>
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 30px;">
+    <p>&copy; 2025 Madan Lal | Business Data Analyst</p>
+    <div class="resume-download">
+        <a href="Assets/documents/Madan_Lal_Resume.pdf" download 
+           style="display: inline-block; padding: 10px 16px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); font-size: 1rem; margin-top: 10px;">
+            Download Resume
+        </a>
+    </div>
+</footer>
 
     <script>
         // Intersection Observer for section animations
