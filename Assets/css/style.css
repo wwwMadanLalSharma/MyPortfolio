@@ -55,15 +55,7 @@ header {
         font-weight: bold !important;
     }
 
-    /* Download Resume Button */
-    header a.download-resume {
-        color: #fff !important;
-        font-weight: bold !important;
-        text-decoration: none !important;
-        background: var(--primary-color);
-        padding: 8px 16px;
-        border-radius: 5px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
     }
 
     /* Navigation Items */
@@ -225,13 +217,28 @@ form {
         }
 
 /* Footer */
-footer {
-    background: var(--footer-bg);
-    color: #fff;
-    padding: 15px;
-    margin-top: 30px;
-    font-size: 14px;
+/* Download Resume Button in Footer */
+.resume-download {
+    text-align: center;
+    margin-top: 10px;
 }
+
+.resume-download a {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background var(--transition-duration) ease-in-out;
+}
+
+.resume-download a:hover {
+    background: var(--primary-hover);
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
