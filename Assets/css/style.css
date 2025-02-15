@@ -1,4 +1,4 @@
-﻿/* CSS Custom Properties for Easy Theming */
+/* CSS Custom Properties for Easy Theming */
 :root {
     --primary-color: #007bff;
     --primary-hover: #0056b3;
@@ -32,11 +32,34 @@ body {
     padding-bottom: 50px; /* extra space at bottom */
 }
 
+/* Header Container */
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+    /* Logo Image */
+    .logo-container .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+
 /* Header */
 header {
-    padding: 20px;
     background: var(--header-bg);
-    color: #fff !important; /* Force header text color */
+    color: #fff !important;
     position: sticky;
     top: 0;
     width: 100%;
@@ -48,57 +71,49 @@ header {
         transform: scale(1.02);
     }
 
-    /* Header Title ("MADAN LAL") */
-    header h1,
-    header .logo {
-        color: #fff !important;
-        font-weight: bold !important;
+/* Navigation Container - UPDATED for centering navigation items */
+.nav-container {
+    width: 100%; /* Span full width */
+    display: flex;
+    justify-content: center; /* Center the nav list horizontally */
+    align-items: center;
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    gap: 20px;
+}
+
+    .nav-list li {
+        display: inline;
     }
 
-    /* Download Resume Button */
-    header a.download-resume {
-        color: #fff !important;
-        font-weight: bold !important;
-        text-decoration: none !important;
-        background: var(--primary-color);
-        padding: 8px 16px;
-        border-radius: 5px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Navigation Items */
-    header nav ul {
-        list-style: none;
-        padding: 10px;
-        margin: 0 auto;
-    }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-    header nav a {
+    .nav-list a {
         color: #fff !important;
         text-decoration: none;
         font-size: 18px;
-        font-weight: bold !important;
+        font-weight: bold;
         transition: color var(--transition-duration) ease-in-out;
     }
 
-        header nav a:hover {
+        .nav-list a:hover {
             color: var(--accent-color);
         }
 
-/* General Anchor Styling (outside header) */
-a:not(header nav a) {
+/* General Anchor Styling (outside header nav) */
+a:not(.nav-list a) {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     transition: color var(--transition-duration) ease-in-out;
 }
 
-    a:not(header nav a):hover {
+    a:not(.nav-list a):hover {
         color: var(--primary-hover);
     }
 
@@ -231,18 +246,47 @@ footer {
     padding: 15px;
     margin-top: 30px;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+    /* Footer Download Resume Button */
+    footer .download-resume {
+        display: inline-block;
+        padding: 8px 16px;
+        background: var(--primary-color);
+        color: #fff !important;
+        text-decoration: none !important;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        margin-bottom: 10px; /* Space between button and footer text */
+    }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header, section, footer {
-        padding: 15px;
+    /* Reduce padding for header, sections, and footer */
+    .header-container,
+    section,
+    footer {
+        padding: 15px 10px;
     }
 
-        header nav a {
-            font-size: 16px;
-        }
+    /* Adjust logo size on mobile */
+    .logo-container .logo {
+        width: 60px; /* Reduced size for mobile */
+        height: 60px; /* Reduced size for mobile */
+        margin-right: 10px;
+    }
 
+    /* Stack navigation items vertically */
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjust project width */
     .project {
         width: 90%;
     }
@@ -261,4 +305,3 @@ footer {
         padding: 15px;
     }
 }
-
